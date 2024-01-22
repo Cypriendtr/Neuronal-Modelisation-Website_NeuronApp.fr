@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+<link rel="stylesheet" href="/template/style.css"/>
+<script type="text/javascript" src="/Javascript/interactive.js"></script> 
+
+<html style="background-color: #fff;">
+    <title>Single Izhikevich model</title>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+      <script>
+        $(function(){
+          $("#includedContent").load("/English/EN-menu.html"); 
+        });</script> 
+
+        <meta charset="utf-8" />
+        <header>
+          <div class = "white-wrapper">
+            <div class = "white-page-header">
+              <div class="menu-icon">
+  
+                <!--Menu icon-->
+                <img src = "/template/Image/menu icon black.png" alt = "Menu icon black" class="menu-icon"/>
+  
+                <!-- Primary Menu Overlay-->
+                <div class="overlay-primary-menu" id="includedContent">
+
+                </div>
+              </div>
+  
+              <!--Bouton back to homepage-->
+              <a href="/English/EN-Homepage.html" class = "amu-logo">
+                <img src="/template/Image/Logo_AMU.png" alt="Logo Aix-Marseille université" class="amu-logo"/>
+              </a>
+              <!-- Title on the top of the app-->
+              <h1>Izhikevich single neuron model</h1>
+            </div>
+            <hr class = "white-separation-line-homepage"/>
+          </div>
+          
+        </header>
+    </head>
+    <body class="body">
+        <div class = "white-left-box">
+            <div class="canvasplotdiv">
+              <canvas class="canvasStim" id="Stim" aria-label="chart" role="img"></canvas>
+
+              <canvas class="canvasplot" id="Plot" aria-label="chart" role="img"></canvas>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+              <script type="text/javascript" src="/Javascript/Single Neuron Model/single-izhi.js"></script>  
+              <div class="Info-div" id="div-information">
+                <h3>Here is useful information about the variables to enter when using the Izhikevich model.</h3>
+                <div class="div-info-izhikevich-image">
+                  <img src="/template/Image/izhikevich/Izhikevich consigne.png" alt="Consignes pour graphique Izhikevich" class="image-consigne-izhikevich">
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class = "white-right-box">
+          <main>
+            <div class="vl"></div>
+            <div class="var-div-design">
+              <h1>User interface and variables</h1>
+              <h3>Parameters of stimulation</h3>
+              <form method="get" target="_self" >
+                <label for="Noisyinput">Noisy input </label>
+                <input type="text" id="Noisyinput" value="0">
+                <input id="Noisyinput" type="range" min="0" max="20" value="0" class="inputslider" onchange="updateTextInput(this.value);"><br>
+
+                <label for="resolgraph">Graph resolution (ms):</label>
+                <input id="resolgraph" type="number" name="Resolution graphs (ms)" value="1"><br>
+
+                <label for="temps_record">Recording time (s):</label>
+                <input id="temps_record" type="number" name="Temps enregistrement (s)" value="1"><br>
+
+                <label for="Debut stim">Start stimulation (ms):</label>
+                <input id="Debut stim" type="number" name="Debut stimulation" value="50" step="10"><br>
+                
+                <label for="Duree stimulation">Stimulation duration (ms):</label>
+                <input id="Duree stimulation" type="number" name="Duree stimulation" value="500" step="50"><br>
+                
+                <label for="Intensite">Intensity stim (pA):</label>
+                <input id="Intensite" type="number" name="Intensite de la stimulation (pA)" value="12"><br>
+                
+              </form>
+              <h3>Izhikevich parameters</h3>
+              <form method="get" target="_self">
+
+                <label for="Vrepos">V resting (mV):</label>
+                <input id="Vrepos" type="number" name="Potentiel de repos du neuron" value="-65"><br>
+
+                <label for="A"> Decay rate a :</label>
+                <input id="A" type="number" name="A" value="0.02" step="0.01"><br>
+
+                <label for="B">Sensitivity b :</label>
+                <input id="B" type="number" name="B" value="0.2" step="0.1"><br>
+
+                <label for="C">Potential reset c :</label>
+                <input id="C" type="number" name="C" value="-50" step="5"><br>
+
+                <label for="D">Current reset d :</label>
+                <input id="D" type="number" name="D" value="2"><br>
+              </form>
+              <div class="div-plot-button">
+                <form>
+                  <br><br><br>
+                  <input type="button" for="info" onclick="showInfo()" value="Informations" class="plot-button">
+                  <input type="button" value="Plot" onclick="getdata()" class="plot-button"><br>
+                  <input type="button" value="Download" onclick="download()" class="plot-button"><br>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+<link rel="stylesheet" href="/template/style.css"/>
+<script type="text/javascript" src="/Javascript/interactive.js"></script> 
+
+
+<html style="background-color: #fff;">
+    <title>Leaky integrated & fire </title>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+      <script>
+      $(function(){
+        $("#includedContent").load("FR-menu.html"); 
+      });</script> 
+        <meta charset="utf-8" />
+        <header>
+          <div class="white-wrapper">
+            <div class = "white-page-header">
+              <div class="menu-icon">
+  
+                <!--Menu icon-->
+                <img src = "/template/Image/menu icon black.png" alt = "Menu icon black" class="menu-icon"/>
+  
+                <!-- Primary Menu Overlay-->
+                <div class="overlay-primary-menu" id="includedContent">
+
+                </div>
+              </div>
+  
+              <!--Bouton back to homepage-->
+              <a href="/Homepage.html" class = "amu-logo">
+                <img src="/template/Image/Logo_AMU.png" alt="Logo Aix-Marseille université" class="amu-logo"/>
+              </a>
+              <!-- Title on the top of the app-->
+              <h1>Leaky Integrated & Fire</h1>
+            </div>
+            <hr class = "white-separation-line-homepage"/>
+          </div>
+          
+        </header>
+    </head>
+    <body class="body">
+        <div class = "white-left-box">
+            <div class="canvasplotdiv">
+              <canvas class="canvasStim" id="Stim" aria-label="chart" role="img"></canvas>
+
+              <canvas class="canvasplot" id="Plot" aria-label="chart" role="img"></canvas>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+              <script type="text/javascript" src="/Javascript/Single Neuron Model/lif.js"></script>
+              <div class="Info-div" id="div-information">
+                <h3>
+                  Voici quelques informations sur le model Leaky Integrated and fire :</h3>
+                <section>
+                  Ce modèle est parmis les premiers modèles mathématiques decrivant la décharge d'un neurone. Il fut inventé en 1909 par le français Louis Lapicque. 
+                </section>
+              </div>
+            </div>
+        </div>
+        <div class = "white-right-box">
+          <main>
+            <div class="vl"></div>
+            <div class="var-div-design">
+              <h1>Variables du modèle</h1>
+              <h3>Parametres de stimulation</h3>
+              <form method="get" target="_self" >
+                <label for="Noisyinput"> Input Bruité</label>
+                <input type="text" id="Noisyinput" value="0">
+                <input type="range" min="0" max="200" value="0" class="inputslider" onchange="updateTextInput(this.value);"><br>
+
+                <label for="resolgraph">Résolution du graph (ms):</label>
+                <input id="resolgraph" type="number" name="Resolution graphs (ms)" value="1"><br>
+
+                <label for="temps_record">Temps enregistrement (s):</label>
+                <input id="temps_record" type="number" name="Temps enregistrement (s)" value="1"><br>
+
+                <label for="Debut stim">Début stimulation (ms):</label>
+                <input id="Debut stim" type="number" name="Debut stimulation" value="50" step="10"><br>
+                
+                <label for="Duree stimulation">Durée stimulation (ms):</label>
+                <input id="Duree stimulation" type="number" name="Duree stimulation" value="500" step="50"><br>
+                
+                <label for="Intensite">Intensité stim (pA):</label>
+                <input id="Intensite" type="number" name="Intensite de la stimulation (pA)" value="150" step="10"><br>
+                
+              </form>
+              <h3>Propriété du neurone</h3>
+              <form method="get" target="_self">
+
+                <label for="Vspike">V Spike (mV):</label>
+                <input id="Vspike" type="number" name="Hauteur max du spike" value="30"><br>
+
+                <label for="Vthr">Seuil PA (mV):</label>
+                <input id="Vthr" type="number" name="Seuil potentiel d'action" value="-50" step="5"><br>
+
+                <label for="Vrepos">V initial (mV):</label>
+                <input id="Vrepos" type="number" name="Potentiel de repos du neuron" value="-70" step="5"><br>
+
+                <label for="Rmemb">Résistance membranaire:</label>
+                <input id="Rmemb" type="number" name="Restistance Membranare du neurone" value="0.14" step="0.01"><br>
+                
+                <label for="Vreset">V repos (mV):</label>
+                <input id="Vreset" type="number" name="Potentiel de reset" value="-80" step="5"><br>
+
+                <label for="csttemps">Constante de temps:</label>
+                <input id="csttemps" type="number" name="Constante de temps du neurone" value="30"><br>
+              </form>
+              <div class="div-plot-button">
+                <form>
+                  <br><br><br>
+                  <input type="button" for="info" onclick="showInfo()" value="Informations" class="plot-button">
+                  <input type="button" value="Plot" onclick="getdata()" class="plot-button"><br>
+                  <input type="button" value="Download" onclick="download()" class="plot-button"><br>
+                </form>
+                
+              </div>
+            </div>
+          </main>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,718 @@
+* { 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    max-height: none;
+}
+
+head{
+    width: inherit;
+}
+/* ------------------ Body element ------------------*/
+.body{
+    min-width: inherit;
+    height: 100vh;
+    width: inherit;
+    margin: 0;
+    background-image: linear-gradient(270deg,black,black,rgb(37, 41, 45))
+}
+.homepage-tutorat-image{
+    padding: 0px;
+    height: auto;
+    max-height: 95%;
+    width: 100%;
+}
+/* ------------------ Homepage element ------------------*/
+.right-box{
+    float: right;
+    display: flex;
+    background-color: black;
+    place-items: center;
+    height: inherit;
+    color: #fff;
+    width: 50%;
+    min-width: 400px;
+    margin: 0;
+}
+.left-box{
+    float: left;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    min-width: 400px;
+    height:inherit;
+    color: #fff;
+    background-image: linear-gradient(270deg,black,rgb(37, 41, 45));
+}
+.justified-text{
+    padding: 10px;
+    place-items: center; 
+    text-align:center ; 
+    list-style: none;  
+}
+.Choose-Language{
+    margin-top: 20px;
+    place-items: center;
+    font-size: large;
+    list-style: none;
+    color: #fff;
+}
+/* ------------------------- White pages elements -------------------------*/
+
+
+/*------------------ Homepage element ------------------*/
+.wrapper {
+    box-sizing: border-box;
+    height: inherit;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(270deg,black,black,rgb(37, 41, 45));
+}
+.page-header, .page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100vw;
+    background-image: linear-gradient(270deg,black,black,rgb(37, 41, 45));
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    place-items: center;
+}
+.separation-line-homepage{
+    background-image: linear-gradient(to right,#fff,black);
+    height: 1px;
+    width: 100vw;
+    border: none;
+    padding: 0%;
+}
+
+.menu-icon{
+    padding: 4px;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;    
+}
+
+.amu-logo{
+    width: 230px;
+    height: 72px;
+    padding: 4px;
+    padding-right: 30px ;
+}
+
+
+/*------------------ White pages body ------------------*/
+
+.white-wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(270deg,#fff,#fff,rgb(37, 41, 45));
+}
+.white-page-header, .white-page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-image: linear-gradient(270deg,#fff,#fff,rgb(37, 41, 45));
+    color: black;
+    padding: 5px;
+    display: flex;
+    place-items: center;
+}
+.white-separation-line-homepage{
+    background-image: linear-gradient(to left,#fff,black);
+    height: 1px;
+    width: 100%;
+    border: none;
+    padding: 0%;
+}
+.white-right-box{
+    float: right;
+    display: flex;
+    background-color: #fff;
+    height:100vh;
+    color: black;
+    width: 20%;
+    min-width: 160px;
+    margin: 0;
+    justify-content: center;
+}
+.white-left-box{
+    float: left;
+    display: auto;
+    width: 80%;
+    min-width: 640px;
+    height: 100vh;
+    color: black;
+    background-color: #fff;
+    border-color: transparent;
+}
+.vl{
+   height:100vh;
+   width: 2px;
+   border-left: 2px black;
+   background-color: black;
+   position: absolute;
+   left: 80%;
+   z-index: 0;
+}
+/*----------------------------- Overlay elements -----------------------------*/
+
+/*------------------ Primary overlay ------------------*/
+.overlay-primary-menu{
+    background-color: rgb(192, 195, 198);
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size: x-large;
+    border-color: transparent;
+    border-top-width: 40px;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    place-items: center;
+    position: relative;
+    top: 0px;
+    left: 4px;
+    height: 200px;
+    width: 350px;
+    z-index: 2;
+
+}
+.menu-icon:hover .overlay-primary-menu{
+    visibility: visible;
+}
+.overlay-primary-menu:hover .overlay-primary-menu{
+    visibility: visible;
+}
+
+/*------------------ Single neuron model overlay ------------------*/
+
+.single-neuron-model-overlay{
+    background-color: rgb(192, 195, 198);
+
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size: x-large;
+    border-color: black;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    height: 200px;
+    width: 350px;
+    place-items: center;
+    z-index: 2;
+}
+.visible-single-neuron-model-overlay:hover .single-neuron-model-overlay{
+    visibility: visible;
+    display: flex;
+    padding: 10px;
+}
+
+/*------------------ contact overlay ------------------*/
+.contact-overlay{
+    background-color: rgb(192, 195, 198);
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size: x-large;
+    border-color: black;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    height: auto;
+    width: auto;
+    place-items: center;
+    z-index: 2;
+}
+
+.visible-contact-overlay:hover .contact-overlay{
+    visibility: visible;
+    display: flex;
+    padding: 10px;
+    z-index: 2;
+}
+.menu-link-text{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    transition: color 0.4s;
+}
+
+.menu-link-text:hover .menu-link-text{
+    color: rgb(30, 122, 214);
+}
+.contact-image{
+    height: inherit;
+    width: inherit;
+}
+.second-menu-link-text{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    transition: color 0.4s;
+}
+.second-menu-link-text:hover {
+    color: rgb(30, 122, 214);
+}
+
+/* ------------------ Canvas elements ------------------*/
+
+.canvasplotdiv{
+    background-color: rgba(72, 71, 71, 0.137);
+    place-items: center;
+    height:100vh;
+    padding: 10px;
+}
+.canvasStimdiv{
+    background-color: rgba(72, 71, 71, 0.137);
+    place-items: center;
+    height:15%;
+    min-height: 15%;
+
+}
+.canvasplot{
+    background-color: rgba(0, 0, 0, 0.178);
+    height: 70%;
+    width: 100%;
+    max-height: 70%;
+
+}
+.canvasStim{
+    background-color: rgba(0, 0, 0, 0.178);
+    height: auto;
+    width: 100%;
+}
+
+/* ------------------ Variables and plot ------------------*/
+.var-div-design{
+    height: 100%;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+.div-plot-button{
+    place-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 120px;
+    display: auto;
+}
+.plot-button{
+    display: auto;
+    font-size:medium;
+    font-weight: 600;
+    height: 30px;
+    width: 140px;
+}
+input{width: 20%;
+    padding: 6px;}
+.inputslider{
+    width: 90%;
+}
+
+/*------------------ Model informations and consignes ------------------*/
+
+.image-consigne-izhikevich{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.div-info-izhikevich-image{
+    height: 400px;
+    width: 580px;
+}
+.Info-div{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    background-color: #fff;
+}
+
+/*------------------ Query responsive conditions 600px------------------*/
+
+@media screen and (min-width: 600px) and (max-width: 920px){
+.right-box{
+    float: bottom;
+    display: flex;
+    place-items: center;
+    height: 50vh;
+    color: #fff;
+    width: inherit;
+    min-width: 400px;
+    max-height: none;
+    margin: 0;
+    background-image: linear-gradient(270deg,black,rgb(37, 41, 45));
+}
+.homepage-tutorat-image{
+    padding: 0px;
+    height: auto;
+    max-height: 100%;
+    width: 100vw;
+}
+.left-box{
+    float: top;
+    display: flex;
+    place-items: center;
+    width: inherit;
+    min-width: inherit;
+    height: 50vh;
+    color: #fff;
+    background-image: linear-gradient(270deg,black,rgb(37, 41, 45));
+}
+.white-right-box{
+    float: bottom;
+    display: flex;
+    background-color: #fff;
+    height:20vh;
+    color: black;
+    width: inherit;
+    min-width: inherit;
+    margin: 20;
+    justify-content: center;
+}
+.white-left-box{
+    float: top;
+    display: auto;
+    width: inherit;
+    height: 80vh;
+    color: black;
+    background-color: #fff;
+}
+.vl{
+    visibility: hidden;
+}
+.canvasplot{
+    background-color: rgba(0, 0, 0, 0.178);
+    height: 50%;
+    width: 100%;
+    max-height: 60%;
+}
+.canvasplotdiv{
+    background-color: rgba(72, 71, 71, 0.137);
+    place-items: center;
+    height:100%;
+    padding: 10px;
+}
+.canvasStimdiv{
+    background-color: rgba(72, 71, 71, 0.137);
+    place-items: center;
+    height:15%;
+    min-height: 15%;
+
+}
+
+.canvasStim{
+    background-color: rgba(0, 0, 0, 0.178);
+    height: auto;
+    width: 100%;
+}
+
+/*------------------------- Responsive overlay elements -----------------------*/
+.menu-link-text{
+    color: black;
+    text-decoration: none;
+    padding: 6px;
+    position: relative;
+    transition: color 0.4s;
+}
+.second-menu-link-text{
+    color: black;
+    text-decoration: none;
+    padding: 6px;
+    position: relative;
+    transition: color 0.4s;
+}
+
+/*------------------ Responsive primary overlay ------------------*/
+
+.overlay-primary-menu{
+    background-color: rgb(192, 195, 198);
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size:large;
+    border-color: transparent;
+    border-top-width: 40px;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    position: relative;
+    top: 0px;
+    left: 4px;
+    height: 140px;
+    width: 250px;
+    z-index: 2;
+}
+/*------------------ Responsive single neuron model overlay ------------------*/
+
+.single-neuron-model-overlay{
+    background-color: rgb(192, 195, 198);
+
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size: large;
+    border-color: black;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    height: 140px;
+    width: 280px;
+    place-items: center;
+    z-index: 2;
+    display: flex;
+}
+
+/*------------------ Responsive contact overlay ------------------*/
+
+.contact-overlay{
+    background-color: rgb(192, 195, 198);
+    /*---- Font style ----*/
+
+    font-family:Arial;
+    color: black;
+    font-size: small;
+    border-color: black;
+    /*---- Position & size param ----*/
+
+    visibility: hidden;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    top: 30px;
+    left: -40px;
+    height: 320px;
+    width: 250px;
+    z-index: 2;
+}
+.justified-text{
+    font-size: inherit;
+    padding: 10px;
+    place-items: center; 
+    text-align:center ; 
+    list-style: none;  
+}
+}
+
+
+
+
+
+/*--------------------------- Query responsive conditions 300px ---------------------------*/
+
+@media screen and (min-width: 300px) and (max-width: 599px){
+    h1{font-size: 20px;}
+    .menu-icon{
+        padding: 4px;
+        height: 55px;
+        width: 55px;
+        background-color: transparent;    
+    }
+    
+    .amu-logo{
+        width: 150px;
+        height: 55px;
+        padding: 4px;
+        padding-right: 5px
+    }
+    .right-box{
+        float: bottom;
+        display: flex;
+        place-items: center;
+        height: 50vh;
+        color: #fff;
+        width: inherit;
+        min-width: 320px;
+        max-height: none;
+        margin: 0;
+        background-image: linear-gradient(270deg,black,rgb(37, 41, 45));
+    }
+    .homepage-tutorat-image{
+        padding: 0px;
+        height: auto;
+        max-height: 100%;
+        width: 100vw;
+    }
+    .left-box{
+        float: top;
+        display: flex;
+        place-items: center;
+        width: inherit;
+        min-width: inherit;
+        height: 50vh;
+        color: #fff;
+        background-image: linear-gradient(270deg,black,rgb(37, 41, 45));
+    }
+
+    .white-right-box{
+        float: bottom;
+        display: flex;
+        background-color: #fff;
+        height:20vh;
+        color: black;
+        width: 100vw;
+        min-width: inherit;
+        margin: 20;
+        justify-content: center;
+    }
+    .white-left-box{
+        float: top;
+        display: auto;
+        width: 100vw;
+        height: 80vh;
+        color: black;
+        background-color: #fff;
+    }
+    .vl{
+        visibility: hidden;
+    }
+    .canvasplot{
+        background-color: rgba(0, 0, 0, 0.178);
+        height: 50%;
+        width: inherit;
+        max-height: 55%;
+    }
+    .canvasplotdiv{
+        background-color: rgba(72, 71, 71, 0.137);
+        place-items: center;
+        height:100%;
+        padding: 10px;
+    }
+    .canvasStimdiv{
+        background-color: rgba(72, 71, 71, 0.137);
+        place-items: center;
+        width: inherit;
+        height:auto;
+        min-height: 15%;
+    
+    }
+    
+    .canvasStim{
+        background-color: rgba(0, 0, 0, 0.178);
+        height: auto;
+        width: 100%;
+    }
+
+    /*------------------------- Responsive overlay elements -----------------------*/
+    .menu-link-text{
+        color: black;
+        text-decoration: none;
+        padding: 6px;
+        position: relative;
+        transition: color 0.4s;
+    }
+    .second-menu-link-text{
+        color: black;
+        text-decoration: none;
+        padding: 6px;
+        position: relative;
+        transition: color 0.4s;
+    }
+    
+    /*------------------ Responsive primary overlay ------------------*/
+    
+    .overlay-primary-menu{
+        background-color: rgb(192, 195, 198);
+        /*---- Font style ----*/
+    
+        font-family:Arial;
+        color: black;
+        font-size:large;
+        border-color: transparent;
+        border-top-width: 30px;
+        /*---- Position & size param ----*/
+    
+        visibility: hidden;
+        position: relative;
+        top: 0px;
+        left: 4px;
+        height: 140px;
+        width: 250px;
+        z-index: 2;
+    }
+    /*------------------ Responsive single neuron model overlay ------------------*/
+    
+    .single-neuron-model-overlay{
+        background-color: rgb(192, 195, 198);
+    
+        /*---- Font style ----*/
+    
+        font-family:Arial;
+        color: black;
+        font-size: large;
+        border-color: black;
+        /*---- Position & size param ----*/
+    
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: -30px;
+        height: 140px;
+        width: 280px;
+        place-items: center;
+        z-index: 2;
+        display: flex;
+    }
+    
+    /*------------------ Responsive contact overlay ------------------*/
+    
+    .contact-overlay{
+        background-color: rgb(192, 195, 198);
+        /*---- Font style ----*/
+    
+        font-family:Arial;
+        color: black;
+        font-size: small;
+        border-color: black;
+        /*---- Position & size param ----*/
+    
+        visibility: hidden;
+        position: absolute;
+    
+        display: flex;
+        flex-direction: column;
+        top: 30px;
+        left: -40px;
+        height: 320px;
+        width: 250px;
+        z-index: 2;
+
+    }
+    .justified-text{
+        font-size: inherit;
+        padding: 10px;
+        font-size: medium;
+        place-items: center; 
+        text-align:center ; 
+        list-style: none;  
+    }
+    
+    }

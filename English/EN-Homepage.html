@@ -1,0 +1,72 @@
+<!doctype html>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+<link rel="stylesheet" href="/template/style.css" />
+<html style="background-image: linear-gradient(270deg,black,black,rgb(37, 41, 45))">
+  <title>NeuronApp</title>
+  
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+    $(function(){
+      $("#includedContent").load("/English/EN-menu.html"); 
+      console.log("ok")
+    });</script> 
+      <header>
+        <div class="wrapper">
+          <div class = "page-header">
+            <div class="menu-icon">
+
+              <!--Menu icon-->
+              <img src = "/template/Image/menu icon white.png" alt = "Menu icon white" class="menu-icon"/>
+
+              <!-- Primary Menu Overlay-->
+              <div class="overlay-primary-menu" id="includedContent">
+                
+              </div>
+            </div>
+
+            <!--Bouton back to homepage-->
+            <a href="/English/EN-Homepage.html" class = "amu-logo">
+              <img src="/template/Image/Logo_AMU.png" alt="Logo Aix-Marseille université" class="amu-logo"/>
+            </a>
+            <!-- Title on the top of the app-->
+            <h1>NeuronApp</h1>
+            
+          </div>
+          <hr class = "separation-line-homepage"/>
+        </div>
+        
+      </header>
+  </head>
+  <body class="body">
+      <div class = "left-box">
+
+        <!--Image centrale-->
+        <img class="homepage-tutorat-image" src="/template/Image/Homepage-tutorat.png" alt="Homepage Image"/>
+        <!--Lien clicable portion de gauche-->
+      </div>
+      <div class = "right-box">
+        <main>
+          <div class="justified-text">
+            <p style="font-size: x-large; ">
+              Welcome to this web application for neural modeling developed 
+              as part of the programming tutorial for Master's students in Neuroscience.            
+            </p>
+            <p class="justified-text" style="font-style: italic;">
+              by Alexandre and Cyprien.
+            </p>
+            <div>
+              <div class="Choose-Language">
+                <label for="Language">Clic here for the French version :</label>
+                <a id="Language" href="/Homepage.html" class="Choose-Language"> French version</a>
+              </div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+  </body>
+
+</html>

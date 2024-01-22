@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<meta content="text/html charset=utf-8" http-equiv="content-type">
+<link rel="icon" type="image/x-icon" href="/template/Image/favicon.ico">
+<link rel="stylesheet" href="/template/style.css"/>
+<script type="text/javascript" src="/Javascript/interactive.js"></script> 
+
+<html style="background-color: #fff;">
+    <title>Hodgkin & Huxley model </title>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+      <script>
+        $(function(){
+          $("#includedContent").load("/English/EN-menu.html"); 
+        });</script> 
+        <meta charset="utf-8" />
+        <header>
+          <div class = "white-wrapper">
+            <div class = "white-page-header">
+              <div class="menu-icon">
+  
+                <!--Menu icon-->
+                <img src = "/template/Image/menu icon black.png" alt = "Menu icon black" class="menu-icon"/>
+  
+                <!-- Primary Menu Overlay-->
+                <div class="overlay-primary-menu" id="includedContent">
+
+                </div>
+              </div>
+  
+              <!--Bouton back to homepage-->
+              <a href="/English/EN-Homepage.html" class = "amu-logo">
+                <img src="/template/Image/Logo_AMU.png" alt="Logo Aix-Marseille université" class="amu-logo"/>
+              </a>
+              <!-- Title on the top of the app-->
+              <h1>Hodgkin & Huxley model</h1>
+            </div>
+            <hr class = "white-separation-line-homepage"/>
+          </div>
+          
+        </header>
+    </head>
+    <body class="body">
+        <div class = "white-left-box">
+            <div class="canvasplotdiv">
+              <canvas class="canvasStim" id="Stim" aria-label="chart" role="img"></canvas>
+
+              <canvas class="canvasplot" id="Plot" aria-label="chart" role="img"></canvas>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+              <script type="text/javascript" src="/Javascript/Single Neuron Model/single-HH.js"></script>
+              <div class="Info-div" id="div-information">
+                <h3>
+                  Here is some information about the Hodgkin and Huxley model :</h3>
+                <section>
+                  This model originated in the 1950s from the work of the two researchers, 
+                  Hodgkin and Huxley, for which they were awarded the Nobel Prize in Physiology and Medicine in 
+                  1963. In their article published in 1952, they studied the generation of action potentials 
+                  in the axon of a giant squid.
+
+                </section>
+              </div>
+            </div>
+        </div>
+        <div class = "white-right-box">
+          <main>
+            <div class="vl"></div>
+            <div class="var-div-design">
+              <h1>User interface and variables</h1>
+              <h3>Parameters of stimulation</h3>
+              <form method="get" target="_self" >
+                <label for="Noisyinput"> Noisy Input</label>
+                <input type="text" id="Noisyinput" value="0">
+                <input type="range" min="0" max="10" value="0" class="inputslider" step="1" onchange="updateTextInput(this.value);"><br>
+
+                <label for="resolgraph">Graph resolution (ms):</label>
+                <input id="resolgraph" type="number" name="Resolution graphs (ms)" value="1"><br>
+
+                <label for="temps_record">Recording time (s):</label>
+                <input id="temps_record" type="number" name="Temps enregistrement (s)" value="0.3" step="0.1"><br>
+
+                <label for="Debut stim">Start stimulation (ms):</label>
+                <input id="Debut stim" type="number" name="Debut stimulation" value="30" step="2"><br>
+                
+                <label for="Duree stimulation">Stimulation duration (ms):</label>
+                <input id="Duree stimulation" type="number" name="Duree stimulation" value="200" step="50"><br>
+                
+                <label for="Intensite">Intensity stim (pA):</label>
+                <input id="Intensite" type="number" name="Intensite de la stimulation (pA)" value="2" step="0.1"><br>
+                
+              </form>
+              <h3>HH neuron properties</h3>
+              <form method="get" target="_self">
+
+                <label for="g0_k">K Conductance:</label>
+                <input id="g0_k" type="number" name="Conductance K" value="35" step="5"><br>
+
+                <label for="g0_na">Na Conductance:</label>
+                <input id="g0_na" type="number" name="Conductance Na" value="40" step="5"><br>
+
+                <label for="gL">Leaky Conductance:</label>
+                <input id="gL" type="number" name="Conductance de fuite" value="0.3" step="0.1"><br>
+
+                <label for="E_K">K eq potential:</label>
+                <input id="E_K" type="number" name="Potentiel eq K" value="-99" step="5"><br>
+
+                <label for="E_na">Na eq potential:</label>
+                <input id="E_na" type="number" name="Potentiel eq Na" value="55" step="5"><br>
+
+                <label for="E_L">Neuron eq potential:</label>
+                <input id="E_L" type="number" name="Potentiel eq Neuron" value="-70" step="5"><br>
+
+                <label for="C">Membrane capacity:</label>
+                <input id="C" type="number" name="Capactité memebrenaire du neurone" value="1" step="0.1"><br>
+                
+                <label for="V_0">V start (mV):</label>
+                <input id="V_0" type="number" name="Potentiel de repos" value="-70" step="5"><br>
+
+                <label for="n">n probability:</label>
+                <input id="n" type="number" name="Probabilité d'ouverture sous unité potassique" value="0.01" step="0.01"><br>
+
+                <label for="m">m probability:</label>
+                <input id="m" type="number" name="Probabilité d'ouverture sous unité sodique" value="0.01" step="0.01"><br>
+
+                <label for="h">h probability:</label>
+                <input id="h" type="number" name="Probabilité desinactivation sous unité sodique" value="0.6" step="0.01"><br>
+
+                
+              </form>
+              <div class="div-plot-button">
+                <form>
+                  <br><br><br>
+                  <input type="button" for="info" onclick="showInfo()" value="Informations" class="plot-button">
+                  <input type="button" value="Plot" onclick="getdata()" class="plot-button"><br>
+                  <input type="button" value="Download" onclick="download()" class="plot-button"><br>
+                </form>
+                
+              </div>
+            </div>
+          </main>
+        </div>
+
+    </body>
+</html>
